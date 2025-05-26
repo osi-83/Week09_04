@@ -1,0 +1,171 @@
+.tarefas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #928d8d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #070707;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.tarefas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nova-tarefa {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.nova-tarefa input {
+    flex: 1;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.nova-tarefa button {
+    width: 100px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    background-color: #316d7e;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    transition: background-color 0.4s ease;
+
+}
+
+.nova-tarefa button:hover {
+    background-color: #1f4e5a;
+}
+
+.tarefas h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.colunas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colunas {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.coluna {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px;
+    background-color: #dcdcdc;
+    border-radius: 8px;
+}
+
+.coluna h3 {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.coluna ul {
+    padding: 0;
+}
+
+.coluna li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.coluna input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+
+@media screen and (max-width: 750px) {
+    .tarefas {
+        margin-top: 10px;
+        padding: 5px;
+        border-radius: 4px;
+        border: none;
+        background-color: #928d8d;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        color: #070707;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        max-width: 350px;
+    }
+    .coluna {
+        padding: 5px;
+        border-radius: 8px;
+        border: none;
+        background-color: #eceaea;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        color: #070707;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 12px;
+    }
+    .progresso {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        border-radius: 4px;
+        border: none;
+        background-color: #928d8d;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        color: #070707;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    .tarefas ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: #000000;
+        font-weight: bold;
+    }
+    .tarefas h2 {
+        margin: 0;
+        font-size: 20px;
+    }    
+    .nova-tarefa input {
+        padding: 5px;
+        border-radius: 4px;
+        border: none;
+        background-color: #928d8d;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        color: #070707;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 12px;
+    }    
+    .nova-tarefa button {
+        font-size: 14px;
+    }
+    
+}
+
