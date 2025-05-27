@@ -46,22 +46,27 @@ const Tarefas: React.FC = () => {
           <div className="coluna" key={periodo}>
             <h3>{periodo}</h3>
             <ul>
-              {tarefasPorPeriodo(periodo).map((tarefa, index) => (
-                <li key={index}>
-                  <label style={{
-                    textDecoration: tarefa.concluida ? 'line-through' : 'none', color: tarefa.concluida ? '#aaa': '#000', 
-                    }}
-                    >
-                    <input
-                      type="checkbox"
-                      checked={tarefa.concluida}
-                      onChange={() => alternarConclusao(index)}
-                      style={{ marginRight: '8px' }}
-                    />
-                    {tarefa.descricao}
-                  </label>
-                </li>
-              ))}
+              {tarefasPorPeriodo(periodo).map((tarefa) => {
+                const indexReal = tarefas.findIndex(
+                  (t) => t.descricao === tarefa.descricao && t.periodo === tarefa.periodo
+                );
+                return (
+                  <li key={indexReal}>
+                    <label style={{
+                      textDecoration: tarefa.concluida ? 'line-through' : 'none',
+                      color: tarefa.concluida ? '#aaa' : '#000',
+                    }}>
+                      <input
+                        type="checkbox"
+                        checked={tarefa.concluida}
+                        onChange={() => alternarConclusao(indexReal)}
+                        style={{ marginRight: '8px' }}
+                      />
+                      {tarefa.descricao}
+                    </label>
+                  </li>
+                );
+              })}
             </ul>
             <p>
               Concluidas: {tarefasPorPeriodo(periodo).filter((t) => t.concluida).length
