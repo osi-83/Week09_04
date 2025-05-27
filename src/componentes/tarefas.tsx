@@ -55,7 +55,7 @@ const Tarefas: React.FC = () => {
                     <input
                       type="checkbox"
                       checked={tarefa.concluida}
-                      onChange={() => alternarConclusao(tarefas.indexOf(tarefa))}
+                      onChange={() => alternarConclusao(index)}
                       style={{ marginRight: '8px' }}
                     />
                     {tarefa.descricao}
